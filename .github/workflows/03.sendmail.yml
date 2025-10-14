@@ -21,26 +21,7 @@ jobs :
           from: ${{secrets.MAIL_ADDRESS}}
           to: sharamanju16@gmail.com, ramyalakshmi055@gmail.com
           subject: mail title.
-          body: your messages.def generator(n):
-               Hi guys Hello
-                             if n%2 == 0 or n<1:
-                                return "only odd order return"
-                                     mg= [[0] * n for _ in range(n)]
-
-                                      num=1
-                                      i,j=0,n//2
-                                      while num <= n*n:
-                                      mg[i][j]=num
-                                      num += 1
-                                      new_i,new_j=(i-1) % n,(j+1) % n
-                                      if mg[new_i][new_j]:
-                                         i=(i+1)%n
-                                      else:
-                                         i,j=new_i,new_j
-                                         return mg
-                                         n=3
-                                        result=generator(3)
-                                        print(result)
+          body: your messages Hi dear, this is  a mail to user
             
           contentType: text/plain
             
