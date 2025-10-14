@@ -22,7 +22,7 @@ jobs :
           to: sharamanju16@gmail.com, ramyalakshmi055@gmail.com
           subject: mail title.
           body: your messages.def generator(n):
-               Hi guys
+               Hi guys Hello
                              if n%2 == 0 or n<1:
                                 return "only odd order return"
                                      mg= [[0] * n for _ in range(n)]
