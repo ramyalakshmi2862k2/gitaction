@@ -10,7 +10,6 @@ jobs :
       run: echo "Hello World said by Ramya!!"
 
     - name: Sending a mail
-      if: $ {{ always() }}
       uses: devellany/send-mailer@v1.0.2
       with:
           host: smtp.google.com
