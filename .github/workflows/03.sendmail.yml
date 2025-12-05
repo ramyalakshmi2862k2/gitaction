@@ -9,19 +9,19 @@ jobs :
     - name: print Hello world
       run: echo "Hello World said by Ramya!!"
 
-    - name: Sending a mail
-      uses: devellany/send-mailer@v1.0.2
+    
+    - name: Send email
+      uses: dawidd6/action-send-mail@v6
       with:
-          host: smtp.google.com
-          port: 465
-          account: ${{secrets.ACCOUNT}}
-          password: ${{secrets.MAIL_PASSWORD}}
-          sender: devellany
-          from: ${{secrets.ACCOUNT}}
-          to: sharamanju16@gmail.com, ramyalakshmi055@gmail.com
-          subject: mail title.
-          body: your messages Hi dear, this is  a mail to user
-            
-          contentType: text/plain
-            
-          attachments: '[{"path":"README.md"}]' 
+        server_address: smtp.gmail.com
+        server_port: 587                 # or 465
+        secure: true                     # encryption
+        username: ${{ secrets.MAIL_USERNAME }}   # your full email (e.g., you@gmail.com)
+        password: ${{ secrets.MAIL_PASSWORD }}   # Gmail App Password (NOT your normal password)
+        from: "CI Bot <${{ secrets.MAIL_USERNAME }}>"
+        to: "ramyalakshmi055@gmail.com"
+        subject: "Build finished for ${{ github.repository }}"
+        body: "Run #${{ github.run_number }} status: ${{ job.status }}"
+    # Optional extras:
+    # html_body: file://README.html
+    # attachments: "dist/app.zip"
