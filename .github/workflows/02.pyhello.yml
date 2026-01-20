@@ -15,4 +15,4 @@ jobs:
         python-version: '3.13'
 
     - name: Run a python scripts
-      run: python hello1.py
+      run: python dice.py
